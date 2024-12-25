@@ -1,0 +1,416 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #000;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(100, 100, 100);
+    text-decoration: underline;
+}
+
+.bg {
+    position: fixed;
+    background-image: url("./Assets/bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    filter: blur(8px);
+    filter: brightness(0.8);
+    transform: scale(1.1);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+    margin: 10px 0px 10px 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdp {
+    position: relative;
+}
+
+.pdpimg {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+}
+
+.status {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    bottom: -15px;
+    right: 15px;
+    transform: translate(50%, -50%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.pfpstatus {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    margin: 36px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tagdiv {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+    margin-top: 32px;
+    border-radius: 8px;
+    background-color: #323338;
+    align-items: center;
+}
+
+.tagimg {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+}
+
+.tag {
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 800;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin: 4px 8px 4px 4px;
+}
+
+.vtuber {
+    width: 15%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.username {
+    color: #000;
+    font-size: 2.5em; 
+    font-weight: 800;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+
+.cstatus {
+    color: #000;
+    font-size: 1.25em;
+    font-weight: 600;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+}
+
+.title {
+    color: #000;
+    font-size: 2em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-bottom: 0px;
+}
+
+.about {
+    color: #000;
+    font-size: 1em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.mini {
+    position: absolute;
+    color: #000;
+    font-size: 1em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.mini:hover {
+    opacity: 0.6;
+}
+
+.spot {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    margin: 36px;
+}
+
+.albumart {
+    width: 128px;
+    height: 128px;
+    border-radius: 8px;
+}
+
+.songtitle {
+    color: #000;
+    font-size: 1.5em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+}
+
+.songartist {
+    color: #000;
+    font-size: 1em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+}
+
+.progressbar {
+    height: 8px;
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 8px;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.progressbar-fill {
+    height: 8px;
+    box-shadow: 0px 0px 16px rgba(0, 117, 255, 0.5);
+    background-color: rgb(0, 117, 255);
+    border-radius: 8px;
+}
+
+.songinfo {
+    padding-left: 16px;
+    width: 100%;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+}
+
+.songtime {
+    color: #000;
+    font-size: 1em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+}
+
+.songtime2 {
+    color: #000;
+    font-size: 1em;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin-top: 8px;
+    right: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.linksgroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.col {
+    display: flex;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.slink {
+    width:64px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 685px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .about {
+        font-size: 0.80em;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .slink {
+        width: 48px;
+        height: 48px;
+        margin: 4px;
+    }
+
+    .songtitle {
+        margin-top: 0px;
+        font-size: 1em;
+    }
+
+    .songartist {
+        font-size: 0.75em;
+    }
+
+    .songtime {
+        font-size: 0.75em;
+    }
+
+    .songtime2 {
+        font-size: 0.75em;
+    }
+
+    .pdpimg {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+    }
+
+    .status {
+        width: 20px;
+        height: 20px;
+        bottom: -10px;
+        right: 10px;
+    }
+
+    .pfpstatus {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+        margin: 18px;
+    }
+
+    .username {
+        font-size: 1.5em;
+        margin-top: 16px;
+    }
+
+    .cstatus {
+        font-size: 1em;
+        margin-top: 4px;
+    }
+
+    .albumart {
+        width: 78px;
+        height: 78px;
+        border-radius: 8px;
+    }
+
+    .card {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
+
+@media screen and (max-height: 500px) { 
+    .container {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-height: 300px) { 
+    .container {
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+}
+
+
+/* Loader */
+.loadinganim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 9999;
+    transition-duration: 1s;
+}
+
+.loader {
+    width: 10vh;
+    aspect-ratio: 1;
+    border: 1vh solid #000;
+    box-sizing: border-box;
+    background: 
+      radial-gradient(farthest-side,#fff 98%,#0000) top,
+      radial-gradient(farthest-side,#fff 98%,#0000) top,
+      radial-gradient(farthest-side,#fff 98%,#0000) left,
+      radial-gradient(farthest-side,#fff 98%,#0000) right,
+      radial-gradient(farthest-side,#fff 98%,#0000) bottom,
+      #000;
+    background-size: 2vh 2vh;
+    background-repeat: no-repeat;
+    filter: blur(4px) contrast(10); 
+    animation: l19 2s infinite;
+  }
+  @keyframes l19 {
+    0%   {background-position:top,top,left,right,bottom}
+    25%  {background-position:right,top,left,right,bottom}
+    50%  {background-position:bottom,top,left,right,bottom}
+    75%  {background-position:left,top,left,right,bottom}
+    100% {background-position:top,top,left,right,bottom}
+  }
+/* End of loader */
