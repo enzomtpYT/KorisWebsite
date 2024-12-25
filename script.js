@@ -5,6 +5,8 @@ let cstatus = document.getElementById("cstatus");
 let loadinganim = document.getElementById("loadinganim");
 let tag = document.getElementById("tag");
 let tagimg = document.getElementById("tagimg");
+let tagdiv = document.getElementsByClassName("tagdiv")[0];
+let emote = document.getElementById("emote");
 let userid = "1208033802539114590"
 let upprog = null
 isLanLoaded = false
@@ -88,8 +90,7 @@ function update(datas) {
         tag.innerHTML = datas.d.discord_user.clan.tag;
         tagimg.src = `https://cdn.discordapp.com/clan-badges/${datas.d.discord_user.clan.identity_guild_id}/${datas.d.discord_user.clan.badge}.png?size=16`;
     } else {
-        tag.innerHTML = "";
-        tagimg.src = "";
+        tagdiv.style.opacity = "0";
     }
     if ( pdpimg.src !== "https://cdn.discordapp.com/avatars/"+userid+"/"+datas.d.discord_user.avatar) {
         pdpimg.src = "https://cdn.discordapp.com/avatars/"+userid+"/"+datas.d.discord_user.avatar;
@@ -119,7 +120,9 @@ function update(datas) {
         if (datas.d.activities["0"].id == "custom") {
             if (!datas.d.activities["0"].emoji.id) {
                 cstatusd = `${datas.d.activities["0"].emoji.name} ${datas.d.activities["0"].state}`;
+                emote.style.display = "none";
             } else {
+                emote.src = `https://cdn.discordapp.com/emojis/${datas.d.activities["0"].emoji.id}.${datas.d.activities["0"].emoji.animated ? "gif" : "png"}`;
                 cstatusd = datas.d.activities["0"].state;
             }
             cstatus.innerHTML = cstatusd
@@ -146,7 +149,6 @@ lanyard.onmessage = function(event) {
         }, jsonData.d.heartbeat_interval);
     }
     if (jsonData.op == 0) {
-        console.log(jsonData);
         update(jsonData);
     }
   };
